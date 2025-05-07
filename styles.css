@@ -1,0 +1,172 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    }
+
+
+#Container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+#pokename{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(218, 218, 218);
+  margin: auto;
+  width: 400px;
+  font-family:Helvetica;
+  border-radius: 30px;
+}
+#Buscar{
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+}
+#Buscar:hover{
+    background-color: rgba(255, 0, 0, 0.578);
+    cursor: pointer;
+}
+#Buscar:active{
+    background-color: rgb(147, 23, 23);
+}
+#Search{
+    font-size: 1em;
+    border-color: black;
+    border-radius: 5px;
+}
+li{
+    list-style-type: none;
+    margin-left: 15%;
+    
+    
+}
+#ul{
+    width: 100px;
+}
+#Ficha{
+    margin: auto;
+    background-color: bisque;
+    width: 500px;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    
+}
+h2{
+    margin-left: 15%;
+    display: block;
+}
+#pokeSprite{
+    width: 15%;
+      height: auto;
+      margin: auto;
+  }
+#Labels{
+    width:100px;
+   
+}
+#Valores{
+    max-width: 80px;
+   width: 100px; 
+   padding-left: 0%;
+}
+
+#Labelnivel{
+    margin-left: 40%;
+}
+#Refresh{
+    border-radius: 70px;
+    color: blue;
+    font-weight: bold;
+    margin-left: 5px;
+}
+#Refresh:hover{
+    background-color: rgb(186, 186, 186);
+    cursor: pointer;
+    color: rgb(0, 23, 49);
+}
+#Refresh:active{
+    background-color: aliceblue;
+    
+}
+#menu{
+    background-color: red;
+    max-width: 100%;
+    width: 4000px;
+    height: 35px;
+    align-items: center;
+    align-content: center;
+    
+}
+#menu > a{
+    margin-left:20%;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 4px;
+    text-decoration: none;
+}
+a:link:active{
+    background-color: blue;
+    color: blue;
+}
+#Tavela th{
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+}
+tr,th{
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+}
+#altypes{
+    margin-left: 20px;
+}
+#Rivs{
+    margin-left: 20px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgb(108, 92, 114) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+    border-style: solid;
+    
+    color: aliceblue;
+}
+#Randomivs{
+    border-style: solid;
+    border-color: white;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgb(108, 92, 114) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+    border-radius: 40px;
+    color: white;
+}

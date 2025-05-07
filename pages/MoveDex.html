@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoveDex</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/1/1d/GURPS_4th_logo.png">
+    <style>
+        #menu{
+    background-color: red;
+    max-width: 100%;
+    width: 4000px;
+    height: 35px;
+    align-items: center;
+    align-content: center;}
+            body{margin: 0;
+                font-family: sans-serif;}
+                #menu > a{
+    margin-left:20%;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 4px;
+    text-decoration: none;
+                }
+                #Buscar{
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+}
+#Buscar:hover{
+    background-color: rgba(255, 0, 0, 0.578);
+    cursor: pointer;
+}
+#Buscar:active{
+    background-color: rgb(147, 23, 23);
+}
+#Search{
+    font-size: 1em;
+    border-color: black;
+    border-radius: 5px;
+    margin-left: 40%;
+}
+#Descrpition{
+    background-color: rgb(210, 240, 240);
+    width: 800px;
+    margin:auto;
+    height: 400px;
+    border-radius: 25px;
+   margin-top: 2%;
+    display: flex;
+    
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}   
+#AbiDesc{
+    width: 600px;
+  
+  
+    
+}
+#textbox{
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 200px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+#TypePys > img{
+   width: 60px;
+}
+#Typespc > img{
+    width: 60px;
+}
+#Typestat > img{
+    width: 60px;
+}
+#water{
+    display: inline-block;
+    width: 66px;
+    margin-bottom: 4px;
+    background: #dbdbdb;
+    border: 1px solid #a3a3a3;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    color: #fff;
+    font-size: .75rem;
+    font-weight: normal;
+    line-height: 1.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+    text-transform: uppercase;
+    background-color: #39f;
+}
+#fire{
+    display: inline-block;
+    width: 66px;
+    margin-bottom: 4px;
+    background: #dbdbdb;
+    border: 1px solid #a3a3a3;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    color: #fff;
+    font-size: .75rem;
+    font-weight: normal;
+    line-height: 1.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+    text-transform: uppercase;
+    transition: opacity .4s;
+    background-color: #f42;
+}
+#grass{
+    display: inline-block;
+    width: 66px;
+    margin-bottom: 4px;
+    background: #dbdbdb;
+    border: 1px solid #a3a3a3;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    color: #fff;
+    font-size: .75rem;
+    font-weight: normal;
+    line-height: 1.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+    text-transform: uppercase;
+    transition: opacity .4s;
+    background-color: #7c5;
+}
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <a href="http://127.0.0.1:5500/pages/abilityDex.html">AbilityDex</a>
+        <a href="http://127.0.0.1:5500/index.html">PokeFicha</a>
+        <a href="http://127.0.0.1:5500/pages/RandomMon.html">RandomMon</a>
+    </div>
+    
+    <div id="Container">
+        <br>
+        <input placeholder="Pokemon Move" id="Search" type="text" onkeydown="search()">
+        <script>
+            function search() {
+             if(event.key === 'Enter') {
+                       Getmove();
+            }
+            }
+        </script>
+        
+        <button id="Buscar" onclick = "Getmove()" type="submit">Buscar</button>
+        <div id="Descrpition">
+            <div id="textbox">
+               
+                <p id="MoveDesc">
+                  <h3 id="Typeofdmg">Tipo do Movimento</h3>
+                  <a id="TypePys"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dfgb60u-0487066d-d95f-4b5e-9501-73fe14ecf981.png/v1/fill/w_1280,h_1280/physical_move_icon_by_jormxdos_dfgb60u-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZnYjYwdS0wNDg3MDY2ZC1kOTVmLTRiNWUtOTUwMS03M2ZlMTRlY2Y5ODEucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.1oShRDrq7t5ZzLkHA_JbjMGypMuj0dCSpD-o7nTzZYw" alt=""></a>
+                  <a id="Typespc"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dfgb60n-b67f8e0e-fdb5-439f-92da-107c846ce339.png/v1/fill/w_894,h_894/special_move_icon_by_jormxdos_dfgb60n-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZnYjYwbi1iNjdmOGUwZS1mZGI1LTQzOWYtOTJkYS0xMDdjODQ2Y2UzMzkucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DddyteuXo5KMMbJrb_fI7MWanhrTZ6J2CrnTprEy5zc" alt=""></a>
+                  <a id="Typestat"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dfgb616-756e9623-02db-436d-b587-2e0f386b5fc0.png/v1/fill/w_1280,h_1280/status_move_icon_by_jormxdos_dfgb616-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZnYjYxNi03NTZlOTYyMy0wMmRiLTQzNmQtYjU4Ny0yZTBmMzg2YjVmYzAucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.0qmX3MYYbcZWiV52L6gv1dOUOjz1N_0pg3EHstlowDk" alt=""></a>
+                    
+                    
+                </p>
+                <p id="dmg">
+                   <h3>Dano no Gurps</h3>
+                   <p> X d6 </p>
+                </p>
+            
+        </div>
+    
+            <div>
+                <p>
+                    <h3>Modificadores de dano</h3>
+                    
+                    <p id="Modifiers"><button>-</button> Modificadores:<button>+</button></p>
+                </p>
+                <h3>Tipo do ataque</h3>
+                <p id="water">Agua</p>
+                <p id="fire">Fogo</p>
+                <p id="grass">Grama</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="MoveDex.js"></script>
+</body>
+</html>

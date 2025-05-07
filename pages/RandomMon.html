@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandomMon</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/1/1d/GURPS_4th_logo.png">
+    <style>
+        #menu{
+    background-color: red;
+    max-width: 100%;
+    width: 4000px;
+    height: 35px;
+    align-items: center;
+    align-content: center;}
+            body{margin: 0;
+                font-family: sans-serif;
+                background-image: url(https://i.redd.it/1ylpdzbrz4nd1.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-attachment: fixed;
+            }
+                #menu > a{
+    margin-left:20%;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 4px;
+    text-decoration: none;
+                }
+                #grass{
+                    
+                     width: 25%;
+                    z-index: 0;
+                    margin-left: 60%;
+                }
+                #divnevoa{
+                    z-index: 0;
+    background-color: rgb(185, 175, 175);
+    height: 100px;
+    width: 600px;
+    border-radius: 20px;
+    margin-left: 50%;
+    /* Centralizar o conteúdo */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+
+    /* Centralizar a própria div na tela */
+                        
+
+                }
+                #divnevoa > select,input,button{
+                    margin: 10px;
+                }
+                #divnevoa > select{
+                    margin-right: 10px;
+                }
+                #divnevoa > button{
+                    width: 15%;
+                    height: 50px;
+                    font-size: 20px;
+                    border-radius: 20px;
+                }
+                #divnevoa > button:hover{
+                    background-image: linear-gradient(180deg, red, yellow);
+                    
+                }
+                #divnevoa > button:active{
+                    background-image: linear-gradient(180deg, yellow, red);
+                }
+              #Randomon{
+                display: flex;
+                
+              }
+              #Stats{
+                display: table;
+              }
+              #Stats > p{
+               width: 10%;
+               background-color: aqua;
+              }
+              #Moves > img{
+               width: 10%;
+                    justify-content: center;
+                    align-items: center;
+              }
+             
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <a href="http://127.0.0.1:5500/pages/abilityDex.html">AbilityDex</a>
+        <a href="http://127.0.0.1:5500/pages/MoveDex.html">MoveDex</a>
+        <a href="http://127.0.0.1:5500/index.html">PokeFicha</a>
+        
+        
+    </div >
+    
+    <br>
+    <div id="Randomon">
+       
+    
+        <img id="grass" src="https://static.vecteezy.com/system/resources/thumbnails/049/667/518/small_2x/lush-green-grass-patch-with-transparent-background-isolated-on-a-black-background-png.png" alt=""><br>
+        
+        
+        
+        
+    </div>
+    <div id="Moves">
+            
+        </div>
+    
+
+    <div id="divnevoa">
+    <label for="Rdmon">Poke aleatorio &#128073</label>
+    <button id="Rdmon" onclick="GrandomMon()">&#127922</button>
+        <label for="Geracoes">Geracao &#128073</label>
+    <select size="1" label="Lista de geracoes" id="Geracoes">
+        <option value="all">Todas</option>
+        <option value="1">1
+            <option value="2">2
+            <option value="3">3
+            <option value="4">4
+            <option value="5">5
+            <option value="6">6
+            <option value="7">7
+            <option value="8">8
+            <option value="9">9
+                  
+    </select>
+
+    <label for="Lgend">Lendario</label>
+    
+    <input id="Lgend" type="checkbox">
+    <label for="Myth">Mitico</label>
+    <input id="Myth" type="checkbox">
+</div>
+
+<script src="RandomMon.js"></script>
+</body>
+</html>
