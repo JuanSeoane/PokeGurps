@@ -125,7 +125,7 @@ a:link:active{
 tr,th{
     border-style: solid;
     border-color: black;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 #altypes{
     margin-left: 20px;
